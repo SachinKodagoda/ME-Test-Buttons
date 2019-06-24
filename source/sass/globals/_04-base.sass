@@ -1,0 +1,126 @@
+// RESPONSIVE-------------------------------------------------
+.row
+  &:after,
+  &:before
+    content: ""
+    display: table
+    clear: both
+
+.col
+  float: left
+  width: 100%
+  height: auto
+
+=sizes($size)
+  @for $i from 1 through 12
+    .#{$size}#{$i}
+      width: (100/12 * $i)#{%}
+
++sizes(s)
+@media (min-width: $medium-min)
+  +sizes(m)
+@media (min-width: $large-min)
+  +sizes(l)
+@media (min-width: $xlarge-min)
+  +sizes(xl)
+@media (min-width: $xxlarge-min)
+  +sizes(xxl)
+@media (min-width: $xxxlarge-min)
+  +sizes(xxxl)
+
+
+.clearfix::after
+    content: ""
+    clear: both
+    display: table
+
+// FLEX BOX TRICK CLASSES ---------------------------
+.flex
+    display: flex
+    // Flex has following default behaviors
+    // flex-direction: row
+    // flex-wrap: nowrap (So items can come out of the parent container)
+    // justify-content: flex-start
+    // align-items: stretch
+
+// Direction ---------------------------
+.fx_row_reverse
+    flex-direction: row-reverse
+
+.fx_column
+    flex-direction: column
+
+.fx_column_reverse
+    flex-direction: column-reverse
+
+// Wrap ---------------------------
+.fx_wrap
+    flex-wrap: wrap
+
+.fx_wrapReverse
+    flex-wrap: wrap-reverse
+
+// Align Items Horizontally ---------------------------
+.fx_alignRight
+    justify-content: flex-end
+
+.fx_alignCenter
+    justify-content: center
+
+.fx_alignCenterSpaceArrond
+    justify-content: space-around
+
+.fx_alignCenterSpaceBetween
+    justify-content: space-between
+
+// Align Items Vertically ---------------------------
+.fx_alignTop
+    align-items: flex-start
+
+.fx_alignMiddle
+    align-items: center
+
+.fx_alignBottom
+    align-items: flex-end
+
+.fx_alignFontBaseLineToMiddle
+    align-items: baseline
+
+// Align and Wrap ---------------------------
+.fx_alignTopWrap
+    flex-wrap: wrap
+    align-items: flex-start
+
+.fx_alignMiddleWrap
+    flex-wrap: wrap
+    align-content: center
+
+.fx_alignBottomWrap
+    flex-wrap: wrap
+    align-items: flex-end
+
+.fx_perfectCentering
+    justify-content: center
+    align-items: center
+
+.fx_alignMiddleSpaceArrondWrap
+    flex-wrap: wrap
+    align-content: space-around
+
+.fx_alignMiddleSpaceBetweenWrap
+    flex-wrap: wrap
+    align-content: space-between
+
+// Add Styles to Flex children---------------------------
+
+    // order: 0 (Default)
+
+    // flex-grow: 1 (Default | Grow than others)
+    // flex-shrink: 0 (Default | Srink than others)
+    // flex-basis: 200px (not Default)
+    // flex: 0 0 200px (growable shrinkable initialLength)
+
+    // (Following will over ride flex stretch and give the custom alignment to that item)
+    // align-self: center
+    // align-self: flex-start
+    // align-self: flex-end

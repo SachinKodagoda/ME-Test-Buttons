@@ -1,0 +1,101 @@
+doctype html
+html(lang='en')
+  head
+    include ../globals/head.pug
+  body
+    .wrapper
+      .card
+        .tbutton_controller
+          form.form
+            .form_item
+              .lbl_group
+                | Font Color :
+              .form_group
+                input(type='text').form_input.txtBox_01
+            .form_item
+              .lbl_group
+                | Button Color :
+              .form_group
+                input(type='text').form_input.txtBox_02
+            .form_item
+              .lbl_group
+                | FONT COLOR :
+              .form_group
+                .sider_cover
+                  input(type="range" min="0" max="100" value="0").form_slider
+                  .form_slider_popup
+                    .form_slider_popup_val 5
+        //- hr
+        .topic
+          | BUTTON SHAPES
+        hr
+        .tbutton_group
+          .tbutton.tbutton_type.tbutton_type_01
+            | BTN1
+          .tbutton.tbutton_type.tbutton_type_02
+            | BTN2
+          .tbutton.tbutton_type.tbutton_type_03
+            | BTN3
+          .tbutton.tbutton_type.tbutton_type_04
+            | BTN4
+          .tbutton.tbutton_type.tbutton_type_05
+            | BTN5
+          .tbutton.tbutton_type.tbutton_type_06
+            | BTN6
+          .tbutton.tbutton_type.tbutton_type_07
+            | BTN7
+          .tbutton.tbutton_type.tbutton_type_08
+            | BTN8
+          .tbutton.tbutton_type.tbutton_type_09
+            | BTN9
+          .tbutton.tbutton_type.tbutton_type_10
+            | BTN10
+          .tbutton.tbutton_type.tbutton_type_11
+            | BTN11
+          .tbutton.tbutton_type.tbutton_type_12
+            | BTN12
+          .tbutton.tbutton_type.tbutton_type_13
+            | BTN13
+          .tbutton.tbutton_type.tbutton_type_14
+            .innerfix
+              | BTN14
+          .tbutton.tbutton_type.tbutton_type_15
+            .innerfix
+              | BTN15
+          .tbutton.tbutton_type.tbutton_type_16
+            | BTN16
+        .tbutton.tbutton_type.tbutton_type_17
+          | BTN17
+        .topic
+          | BUTTON COLORS
+        hr
+        .tbutton_group
+          .tbutton.tbutton_colors_01
+            | BTN01
+          .tbutton.tbutton_colors_02
+            | BTN02
+          .tbutton.tbutton_colors_03
+            | BTN03
+          .tbutton.tbutton_colors_04
+            | BTN04
+          .tbutton.tbutton_colors_05.rippleActive
+            | BTN05
+          .tbutton.tbutton_colors_06
+            | BTN06
+          .tbutton.tbutton_colors_07
+            .innerfix
+              | BTN06
+        .topic
+          | GROUP ANIMATIONS
+        hr
+        .tbutton_group
+          .tbutton.tbutton_group_01.bouncy
+            | BTN01
+          .tbutton.tbutton_group_02.bouncy
+            | BTN02
+          .tbutton.tbutton_group_03.bouncy
+            | BTN03
+          .tbutton.tbutton_group_04.bouncy
+            | BTN04
+    //- css
+    script(src='assets/js/app.js')
