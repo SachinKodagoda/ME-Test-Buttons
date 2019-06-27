@@ -16,6 +16,10 @@ $(function () {
   })
 });
 
+
+
+// Ripple Effect
+
 var buttons = document.getElementsByClassName('rippleActive');
 
 Array.prototype.forEach.call(buttons, function (b) {
